@@ -31,11 +31,16 @@ const config: Config = {
         bannerTextTransformation: {
           '0% ': { transform: 'translateX(-40rem)' },
           '100%': { transform: 'translateX(0)' },
-        }
+        },
+        fadeOut: {
+          '0%': { opacity: "0" },
+          '100%': { opacity: "100" },
+        },
       },
       animation: {
         bannerTextTransformation: 'bannerTextTransformation 1s ease-in-out 1',
-      }
+        fade: 'fadeOut 1s ease-in-out 1',
+      },
     },
   },
   plugins: [],
