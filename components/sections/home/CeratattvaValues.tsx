@@ -25,7 +25,7 @@ const Reengineering: React.FC = (props) => {
   return (
     <section className='bg-white pb-20'>
         <div className='container mx-auto bg-gray-200 rounded-3xl p-5 shadow-md'>        
-            <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva'>Reengineering the
+            <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva inline-block'>Reengineering the
 ceramic world</h2>
             <div className="grid grid-cols-2 gap-10">
                 <div className='ci-values__swiper overflow-hidden rounded-3xl'>

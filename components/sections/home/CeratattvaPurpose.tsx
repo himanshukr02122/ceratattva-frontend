@@ -7,7 +7,7 @@ const CeratattvaPurpose: React.FC = (props) => {
   return (
     <section className='bg-white py-5 sm:py-10'>
       <div className='container mx-auto p-5'>
-        <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva'>Ceratattva</h2>
+        <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva inline-block'>Ceratattva</h2>
         <div className="lg:grid lg:grid-cols-5 gap-10">
             <div className='lg:col-span-2 overflow-hidden rounded-3xl'>
                 <div className='rounded-3xl ci-video__card bg-home-video bg-cover bg-center duration-300 cursor-pointer' onClick={() => setShowModal(true)} title='click to view video'>

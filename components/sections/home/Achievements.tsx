@@ -2,11 +2,12 @@ import Counter from '@/components/globals/Counter';
 import Image from 'next/image';
 import React from 'react';
 
-const achievementData:{ count: number, suffix: string, title: string, description: string, additionalClass:string }[]=[
+const achievementData:{ count: number, suffix: string, title: string, bgImage: string, description: string, additionalClass:string }[]=[
     {
         count: 40,
         suffix:"+",
         title: "Awards & Recognition",
+        bgImage: "/home/awards-recognitions.jpg",
         description: "Establishing our extraordinary capabilities & services",
         additionalClass:"hidden"
     },
@@ -14,6 +15,7 @@ const achievementData:{ count: number, suffix: string, title: string, descriptio
         count: 20,
         suffix:"+",
         title: "Products & Services",
+        bgImage: "/home/pdc-diagram-1.jpg",
         description: "Ever-growing innovations, products and solutions",
         additionalClass:"block"
     },
@@ -21,6 +23,7 @@ const achievementData:{ count: number, suffix: string, title: string, descriptio
         count: 10,
         suffix:"+",
         title: "Happy customers",
+        bgImage: "/home/happy-customers.png",
         description: "The success metric we value the most",
         additionalClass:"block"
     },
@@ -28,6 +31,7 @@ const achievementData:{ count: number, suffix: string, title: string, descriptio
         count: 10,
         suffix:"+",
         title: "Project management",
+        bgImage: "/home/project-management.jpg",
         description: "Cutting edge solutions to challenging problems",
         additionalClass:"block"
     },
@@ -39,7 +43,7 @@ const Achievements=()=> {
       <h2 className='relative text-4xl md:text-5xl font-bold pb-3 mb-4 md:mb-10 text-center'>
         <span className='border-b-2 pb-2 border-orange-600'>Achievements</span>
       </h2>
-      <ul className='ci-achievements__lists w-[85%] m-0 pt-6 overflow-hidden list-none hexa'>
+      <ul className='hidden lg:block ci-achievements__lists w-[85%] 4xl:w-[60%] 4xl:m-auto m-0 pt-6 overflow-hidden list-none hexa'>
         <li className='ci-achievements__list  float-left relative overflow-hidden invisible'>
         </li>
         <li className='ci-achievements__list float-left relative overflow-hidden invisible'>
@@ -75,7 +79,7 @@ const Achievements=()=> {
                         <Counter runningNumber={20} /> <span>+</span>
                     </div>
                     <h3 className="font-semibold text-sm lg:text-xl my-2 w-full top-2/4 translate-y-[-10%] lg:translate-y-[20%] group-hover:opacity-0 duration-300">Products & Services</h3>
-                    <p className='text-xs md:text-sm w-full top-2/4 translate-y-[150%] group-hover:translate-y-[10%] w-11/12 px-2 bg-[rgba(0,0,0,0.5)] pt-3 pb-40 duration-300'>Ever-growing innovations, products and solutions</p>
+                    <p className='text-xs md:text-sm w-full top-2/4 translate-y-[150%] group-hover:translate-y-[10%] w-11/12 px-2 bg-[rgba(0,0,0,0.5)] pt-1 lg:pt-3 pb-40 duration-300'>Ever-growing innovations, products and solutions</p>
                 </div>
             </div>
         </li>
@@ -135,6 +139,28 @@ const Achievements=()=> {
             </div>
         </li>
       </ul>
+      <div className="container mx-auto lg:hidden">
+        <ul className='flex flex-wrap gap-y-6 md:gap-y-10 mt-10 md:mt-16'>
+            {
+                achievementData.map((item, index)=> {
+                    return(
+                        <li 
+                            style={{backgroundImage: `url(${item.bgImage})`}}
+                            className={`hexagon relative bg-cover bg-center after:content-[""] after:absolute after:top-0 after:left-0 after:bg-[rgba(0,0,0,0.5)] after:w-full after:h-full`} key={index}>
+                            <div className='w-full h-full text-white z-10 relative flex flex-col justify-center items-center'>
+                                <div className="font-bold text-light flex text-2xl md:text-3xl lg:text-4xl">
+                                    <Counter runningNumber={item.count} /> <span>{item.suffix}</span>
+                                </div>
+                                <h3 className="font-semibold text-xl text-center my-2 w-full">{item.title}</h3>
+                                <p className='text-base w-full px-2 pt-3 text-center duration-300'>{item.description}</p>
+                            </div>
+                        </li>
+                    )
+                })
+            }
+        </ul>
+      </div>
+
     </section>
   )
 }

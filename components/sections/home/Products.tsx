@@ -64,8 +64,8 @@ const Items:React.FC<{currentItems:{}[]}> = ({ currentItems }) => {
       <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6 py-5'>
         {currentItems &&
           currentItems.map((item:any,index:number ) => (
-            <div key={index} className='group border hover:shadow-inner hover:shadow duration-300 hover:border-orange-600'>
-              <div className='relative h-52 overflow-hidden '>
+            <div key={index} className='group max-w-xs mx-auto md:max-w-none border border-orange-600 sm:border-gray-300 hover:shadow-inner hover:shadow duration-300 hover:border-orange-600'>
+              <div className='relative h-52 4xl:h-80 overflow-hidden '>
                 <Image
                   src={item.productSample}
                   alt={item.productTitle}
@@ -132,9 +132,9 @@ const Items:React.FC<{currentItems:{}[]}> = ({ currentItems }) => {
 
 const Products = () => {
   return (
-    <section className='py-10'>
-      <div className='container mx-auto'>        
-          <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva'>Products</h2>
+    <section className='py-5 sm:py-10'>
+      <div className='container mx-auto px-5'>      
+          <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva inline-block'>Products</h2>
           <PaginatedItems itemsPerPage={4} />
       </div>
     </section>

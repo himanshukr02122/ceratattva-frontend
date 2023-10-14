@@ -38,8 +38,11 @@ const CoreValues = () => {
   return (
     <section style={{background:"linear-gradient(45deg, rgba(0,39,94,1) 0%, rgba(6,112,169,1) 100%)"}} id='coreValues'>
       <div 
-        className='py-14 container mx-auto'>
-          <h2 className='relative text-4xl text-white font-bold pb-3 mb-10 ci-title--ceratattva'>Our Core Values</h2>
+        className='py-8 sm:py-14 container mx-auto'>
+          <h2 className='relative hidden md:inline-block text-4xl text-white font-bold pb-3 mb-10 ci-title--ceratattva mx-2'>Our Core Values</h2>
+          <h2 className='relative md:hidden text-4xl text-white font-bold pb-3 mb-10 text-center'>
+            <span className='border-b-2 pb-2 border-white'>Achievements</span>
+          </h2>
           <div className=' grid gap-3 lg:gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 '>
             {features && features.length && features.map((item, index)=> {
               return(
