@@ -75,7 +75,7 @@ const Achievements=()=> {
         <li className='ci-achievements__list float-left relative overflow-hidden invisible'>
             <div className='group ci-achievements__list-contents w-full h-full text-white overflow-hidden text-center'>
                 <Image
-                    src="/home/ceramic-products-1.jpg"
+                    src="/home/pdc-diagram-1.jpg"
                     alt="ceramic products"
                     fill
                     className='object-cover object-center duration-300'
