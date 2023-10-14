@@ -6,7 +6,8 @@ const VisionAndMissions = () => {
     <section className='pb-10' id='visionAndMission'>
         <div className="container mx-auto">
             <div>
-                <h2 className='relative text-4xl font-bold pb-3 mb-5 inline-block border-b-2 border-red-700'>CeraTattva Vision and Mission</h2>
+                {/* <h2 className='relative text-4xl font-bold pb-3 mb-5 inline-block border-b-2 border-red-700'>CeraTattva Vision and Mission</h2> */}
+                <h2 className='relative text-4xl font-bold pb-3 mb-6 ci-title--ceratattva'>CeraTattva Vision and Mission</h2>
                 <p className='mb-2'>Facilitation and wider proliferation of innovative and cost-effective advanced ceramic materials and technologies in key strategic sectors such as aerospace, defence, energy and beyond.</p>
                 <p className='mb-2'>To be the best skills, technology and services based total ceramic solution provider to a wider range of customers. To consistently deliver great value to customers through highest professional skills and standards in core competence.</p>
                 <p>To be the synonym for provider of world-class advanced and highly functional ceramic materials, instruments, automation products and services with superior customer reach.</p>    

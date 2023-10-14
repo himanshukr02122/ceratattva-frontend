@@ -35,8 +35,11 @@ const achievementData:{ count: number, suffix: string, title: string, descriptio
 
 const Achievements=()=> {
   return (
-    <section className='py-20 bg-violet-400 my-10' style={{background:"linear-gradient(45deg, rgba(0,39,94,1) 0%, rgba(6,112,169,1) 100%)"}}>
-      <ul className='ci-achievements__lists w-[85%] m-0 overflow-hidden list-none hexa'>
+    <section className='pt-10 pb-20 bg-[#f2fcfe] my-10'>
+      <h2 className='relative text-4xl md:text-5xl font-bold pb-3 mb-4 md:mb-10 text-center'>
+        <span className='border-b-2 pb-2 border-orange-600'>Achievements</span>
+      </h2>
+      <ul className='ci-achievements__lists w-[85%] m-0 pt-6 overflow-hidden list-none hexa'>
         <li className='ci-achievements__list  float-left relative overflow-hidden invisible'>
         </li>
         <li className='ci-achievements__list float-left relative overflow-hidden invisible'>

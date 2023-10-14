@@ -38,7 +38,10 @@ const MyTeams: React.FC = (props) => {
   return (
     <section className='py-6 sm:py-10'>
       <div className='container mx-auto 3xl:max-w-screen-2xl text-center'>
-        <h2 className='relative text-4xl md:text-5xl font-bold pb-3 mb-4 md:mb-10 '>The Team</h2>
+        {/* <h2 className='relative text-4xl md:text-5xl font-bold pb-3 mb-4 md:mb-10 '>The Team</h2> */}
+        <h2 className='relative text-4xl md:text-5xl font-bold pb-3 mb-4 md:mb-10 text-center'>
+          <span className='border-b-2 pb-2 border-orange-600'>The Team</span>
+        </h2>
         <ul className='flex flex-wrap justify-center gap-0 xl:gap-8'>
           {
             ourTeams.map((item:any, index)=> {
