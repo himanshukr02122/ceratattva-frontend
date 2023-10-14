@@ -39,7 +39,7 @@ const achievementData:{ count: number, suffix: string, title: string, bgImage: s
 
 const Achievements=()=> {
   return (
-    <section className='pt-10 pb-20 bg-[#f2fcfe] my-10'>
+    <section className='pt-10 pb-10 sm:pb-16 md:pb-20 bg-[#f2fcfe] my-10'>
       <h2 className='relative text-4xl md:text-5xl font-bold pb-3 mb-4 md:mb-10 text-center'>
         <span className='border-b-2 pb-2 border-orange-600'>Achievements</span>
       </h2>
@@ -140,19 +140,19 @@ const Achievements=()=> {
         </li>
       </ul>
       <div className="container mx-auto lg:hidden">
-        <ul className='flex flex-wrap gap-y-6 md:gap-y-10 mt-10 md:mt-16'>
+        <ul className='flex flex-wrap justify-center mt-10 md:mt-16'>
             {
                 achievementData.map((item, index)=> {
                     return(
                         <li 
                             style={{backgroundImage: `url(${item.bgImage})`}}
-                            className={`hexagon relative bg-cover bg-center after:content-[""] after:absolute after:top-0 after:left-0 after:bg-[rgba(0,0,0,0.5)] after:w-full after:h-full`} key={index}>
-                            <div className='w-full h-full text-white z-10 relative flex flex-col justify-center items-center'>
+                            className={`hexagon relative h-72 w-72 flex items-end sm:h-60 sm:w-60 md:h-80 md:w-80 m-3 md:m-5 bg-cover bg-center`} key={index}>
+                            <div className='w-full h-4/6 text-white z-10 relative bg-[rgba(0,0,0,0.7)] flex flex-col justify-start pt-3 sm:pt-2 md:pt-4 items-center'>
                                 <div className="font-bold text-light flex text-2xl md:text-3xl lg:text-4xl">
                                     <Counter runningNumber={item.count} /> <span>{item.suffix}</span>
                                 </div>
-                                <h3 className="font-semibold text-xl text-center my-2 w-full">{item.title}</h3>
-                                <p className='text-base w-full px-2 pt-3 text-center duration-300'>{item.description}</p>
+                                <h3 className="font-semibold text-xl text-center md:my-2 w-full my-1">{item.title}</h3>
+                                <p className='text-base w-full px-2 leading-5 text-gray-300 text-center duration-300 line-clamp-2'>{item.description}</p>
                             </div>
                         </li>
                     )

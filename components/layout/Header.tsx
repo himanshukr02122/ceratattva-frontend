@@ -160,6 +160,7 @@ const Header: React.FC = (props) => {
                 <li>
                   <Dop
                     menuName="About us"
+                    mainLink="/about-us"
                     dropDownMenuData={AboutUsDropdownList}
                     additionalClass="absolute z-10 hover:text-logo-color"
                     mobile={mobile}
@@ -168,6 +169,7 @@ const Header: React.FC = (props) => {
                 <li>
                   <Dop
                     menuName="Products"
+                    mainLink="/product"
                     dropDownMenuData={productsDropdownList}
                     additionalClass="absolute z-10 hover:text-logo-color"
                     mobile={mobile}

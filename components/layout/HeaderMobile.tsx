@@ -251,6 +251,7 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
             >
               <Dop
                 menuName="About us"
+                mainLink="/about-us"
                 dropDownMenuData={AboutUsDropdownList}
                 additionalClass="absolute z-10"
                 mobile={props.mobile}
@@ -263,6 +264,7 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
             >
               <Dop
                 menuName="Products"
+                mainLink="/product"
                 dropDownMenuData={productsDropdownList}
                 additionalClass="absolute z-10"
                 mobile={props.mobile}

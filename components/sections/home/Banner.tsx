@@ -1,6 +1,5 @@
 import PrimaryButton from '@/components/ui/buttons/PrimaryButton'
 import React, {useState} from 'react'
-// import KnowMore from '@/components/ui/buttons/SecondaryButton';
 import { VideoModal } from '@/components/globals/modals/VideoModal';
 
 const Banner: React.FC = (props) => {

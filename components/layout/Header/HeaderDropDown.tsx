@@ -2,7 +2,7 @@ import { useState,useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Router from "next/router";
-const Dop: React.FC<{menuName: String, dropDownMenuData: any [],additionalClass: String, mobile: boolean }> = (props) => {
+const Dop: React.FC<{menuName: String, dropDownMenuData: any [], mainLink: string, additionalClass: String, mobile: boolean }> = (props) => {
   const [navbar, setNavbar] = useState(false);
   const [isMenuVisible, setMenuVisible] = useState(false);
   const changeBackground = () => {
@@ -23,7 +23,7 @@ const Dop: React.FC<{menuName: String, dropDownMenuData: any [],additionalClass:
         onMouseEnter={() => setMenuVisible(true)}
         onMouseLeave={() => setMenuVisible(false)}
       >
-        <a className={`flex items-center ${isMenuVisible ? !props.mobile ? navbar ? "text-logo-color" : "text-stone-300" : "text-logo-color" : ""} duration-300`}><span className="me-1">{props.menuName}</span>
+        <Link href={props.mainLink} className={`flex items-center ${isMenuVisible ? !props.mobile ? navbar ? "text-logo-color" : "text-stone-300" : "text-logo-color" : ""} duration-300`}><span className="me-1">{props.menuName}</span>
           <AnimatePresence>
             <motion.div animate={{ rotate: isMenuVisible ? 180 : 0 }}
              transition={{ duration: 0.8 }}
@@ -35,7 +35,7 @@ const Dop: React.FC<{menuName: String, dropDownMenuData: any [],additionalClass:
               </svg>}
             </motion.div>
           </AnimatePresence>
-          </a>
+          </Link>
           {isMenuVisible && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -44,7 +44,6 @@ const Dop: React.FC<{menuName: String, dropDownMenuData: any [],additionalClass:
             className={`  ${props.additionalClass}`}
           >
             <ul className="mt-5 bg-white text-black font-medium relative z-10" >
-             
               {props.dropDownMenuData.map((subMenuItem, index) => {
                 return (
                   <li

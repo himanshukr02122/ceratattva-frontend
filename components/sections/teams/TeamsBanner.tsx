@@ -3,7 +3,7 @@ import React from 'react'
 const TeamsBanner = () => {
   return (
     <section 
-        className='h-[500px] sm:h-[600px] md:h-[800px] 3xl:h-[1000px] bg-fixed flex items-start pt-20 pb-12 lg:pb-16 3xl:pt-52 3xl:pb-32 bg-no-repeat shadow-lg bg-cover bg-white relative bg-[url("/teams/team-banner.png")] bg-center bg-no-repeat'
+        className='h-[500px] sm:h-[600px] md:h-[700px] 3xl:h-[1000px] bg-fixed flex items-start pt-20 pb-12 lg:pb-16 3xl:pt-52 3xl:pb-32 bg-no-repeat shadow-lg bg-cover bg-white relative bg-[url("/teams/team-banner.png")] bg-center bg-no-repeat'
     >
         <div className='container mt-24 md:mt-32 sm:ml-10 py-10 px-6 bg-[rgba(0,0,0,0.7)] w-full md:w-2/3'>
             <h3 className=' text-white mb-2 text-base md:text-xl opacity-60 underline-offset-4 underline'>
