@@ -70,6 +70,7 @@ const Items:React.FC<{currentItems:{}[]}> = ({ currentItems }) => {
                   src={item.productSample}
                   alt={item.productTitle}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='object-center object-cover group-hover:scale-125 transform-gpu group-hover:origin-top duration-300'
                 />
               </div>

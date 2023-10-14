@@ -12,6 +12,7 @@ const CompanyDetails = () => {
                         fill
                         src="/home/iitm-research-park.jpg"
                         alt="IITM Research Park"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </div>
                 <h2 className='text-2xl font-semibold my-4'>An IITM-incubated company</h2>

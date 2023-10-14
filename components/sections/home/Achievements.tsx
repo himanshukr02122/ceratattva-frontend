@@ -36,21 +36,6 @@ const achievementData:{ count: number, suffix: string, title: string, descriptio
 const Achievements=()=> {
   return (
     <section className='py-20 bg-violet-400 my-10' style={{background:"linear-gradient(45deg, rgba(0,39,94,1) 0%, rgba(6,112,169,1) 100%)"}}>
-      {/* <div className='container mx-auto text-white p-5'>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {achievementData.map((achievement, index) => {
-                return (
-                <div key={index}>
-                    <div className="font-bold text-light flex text-5xl">
-                        <Counter runningNumber={achievement.count} /> <span>{achievement.suffix}</span>
-                    </div>
-                    <h3 className="text-xl my-2">{achievement.title}</h3>
-                    <p className='font-light text-xs md:text-sm w-3/5'>{achievement.description}</p>
-                </div>
-                );
-            })}
-        </div>
-      </div> */}
       <ul className='ci-achievements__lists w-[85%] m-0 overflow-hidden list-none hexa'>
         <li className='ci-achievements__list  float-left relative overflow-hidden invisible'>
         </li>
@@ -61,6 +46,7 @@ const Achievements=()=> {
                     src="/home/awards-recognitions.jpg"
                     alt="awards and recognitions"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className='object-cover object-right duration-300'
                 />
                 <div className='w-full h-full bg-[rgba(0,0,0,0.5)] group-hover:bg-[rgba(0,0,0,0.3)]'>
@@ -78,6 +64,7 @@ const Achievements=()=> {
                     src="/home/pdc-diagram-1.jpg"
                     alt="ceramic products"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className='object-cover object-center duration-300'
                 />
                 <div className='w-full h-full bg-[rgba(0,0,0,0.5)] group-hover:bg-[rgba(0,0,0,0.3)]'>
@@ -95,6 +82,7 @@ const Achievements=()=> {
                     src="/home/happy-customers.png"
                     alt="happy customers"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className='object-cover object-left duration-300'
                 />
                 <div className='w-full h-full bg-[rgba(0,0,0,0.5)] group-hover:bg-[rgba(0,0,0,0.3)]'>
@@ -112,6 +100,7 @@ const Achievements=()=> {
                     src="/home/project-management.jpg"
                     alt="Project Management"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className='object-cover object-right duration-300'
                 />
                 <div className='w-full h-full bg-[rgba(0,0,0,0.5)] group-hover:bg-[rgba(0,0,0,0.3)]'>
@@ -129,6 +118,8 @@ const Achievements=()=> {
                     src="/home/awards-recognitions.jpg"
                     alt="ceramic products"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
                     className='object-cover object-center duration-300'
                 />
                 <div className='w-full h-full bg-[rgba(0,0,0,0.5)] group-hover:bg-[rgba(0,0,0,0.3)]'>
