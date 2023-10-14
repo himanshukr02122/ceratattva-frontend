@@ -178,11 +178,6 @@ const Header: React.FC = (props) => {
                     Contact
                   </Link>
                 </li>
-                {/* <li className="font-semibold px-2 py-1 hover:animate-pulse hover:bg-orange-700 ">
-                  <Link href="/#">
-                    Ceratattva
-                  </Link>
-                </li> */}
               </ul>
             </div>
           </div>

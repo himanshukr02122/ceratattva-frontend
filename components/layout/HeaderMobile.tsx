@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import LogoLight from "/public/icons/ceratattva-logo-small.png";
 import { motion } from "framer-motion";
 import Dop from "./Header/HeaderDropDown";
+import { useRouter } from "next/router";
 
 
 const AboutUsDropdownList = [
@@ -86,6 +87,7 @@ const navItem = {
 const HeaderMobile: React.FC<{mobile:boolean}> = props => {
 
   const [url, setUrl] = useState("");
+  const router = useRouter()
    // Start:add overflow hidden to body when mobile nav is active (just to stop scrolling)
    const [hidden, setHidden] = useState(false);
    const addOverflowHiddenToBody = () => {
@@ -94,6 +96,16 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
   useEffect(() => {
      document.body.style.overflowY = hidden ? 'hidden' : 'scroll';
    }, [hidden]);
+   useEffect(()=> {
+    if(show) {
+      setAnimation("moving");
+      setShow(show => !show);
+      setTimeout(() => {
+        setAnimation(animation === "closed" ? "open" : "closed");
+      }, 200);
+      setHidden(!hidden);
+    }
+   }, [router.asPath])
   //  ends :add overflow hidden to body when mobile nav is active (just to stop scrolling)
 
   const [show, setShow] = useState(false);
@@ -131,29 +143,14 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
           style={{position:"fixed",
               width:"100%",
               top:"0"}}
-          variants={variants}
-          initial={{y:"-150px"}} animate={{y:"0px"}}
-          transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
-          className={`z-50 ${navbar? "bg-white shadow-lg h-24" : "flex items-center"} duration-300`}
+              variants={variants}
+              initial={{y:"-150px"}} animate={{y:"0px"}}
+              transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
+              className={`z-50 ${navbar? "bg-white shadow-lg h-24" : "flex items-center"} duration-300`}
         >
           <div className="container mx-auto">
             <div className="pt-3 pb-2 flex justify-end">
                 <ul className={`flex gap-4 mx-2 ${navbar ? "":"text-white"}`}>
-                  {/* <li>
-                    <Link
-                      href="/"
-                      className="color-primary flex items-center"
-                      target="_blank"
-                    >
-                      <Image
-                        alt="mail"
-                        src="/icons/head-office-icon.svg"
-                        height={14}
-                        width={14}
-                      />
-                      <span className="ms-1 text-sm">IITM Research Park Taramani, Chennai 600113.</span>
-                    </Link>
-                  </li> */}
                   <li>
                     <a
                       href={`mailto:info@ceratattva.com`}
@@ -193,7 +190,6 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
                     />
                   </div>
                 </Link>
-
                 <motion.button
                   onClick={onClick}
                   className={`${navbar ? "w-9 h-9" : "w-10 h-10"} w-10 h-10 rounded-full flex justify-center items-center ${navbar? "bg-black": "bg-white"}`}
@@ -230,7 +226,6 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
           </div>
         </motion.div>
       </div>
-
       <motion.nav
         animate={show ? "open" : "closed"}
         variants={variants}
