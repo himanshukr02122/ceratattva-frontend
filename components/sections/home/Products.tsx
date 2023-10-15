@@ -78,10 +78,6 @@ const Items:React.FC<{currentItems:{}[]}> = ({ currentItems }) => {
                 <span className=' font-semibold text-gray-400'>{item.productId}</span>
                 <h3 className='text-xl font-semibold'>{item.productTitle}</h3>
                 <p className='text-sm font-light text-justify leading-4 line-clamp-2 my-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus a necessitatibus vel obcaecati omnis minima esse culpa reprehenderit eveniet?</p>
-                {/* <div className='flex gap-3 justify-center items-baseline mt-3'>
-                  <span className='text-2xl font-bold'>{item.currency + item.markedPrice}</span>
-                  <span className='text-lg font-semibold text-gray-400 line-through'>{item.currency + item.sellingPrice}</span>
-                </div> */}
                 <Link href="" target='_blank'
                   className='border-2 block mt-4 w-100 py-2 px-5 text-gray-600 hover:border-black hover:bg-black hover:text-white font-medium duration-300'
                 >
