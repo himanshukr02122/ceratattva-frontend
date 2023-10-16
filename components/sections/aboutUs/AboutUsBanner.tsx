@@ -10,7 +10,7 @@ const AboutUsBanner = () => {
                 One Stop Solution
             </h3>
             <div className=' relative flex items-center'>
-                <h2 className='text-white text-2xl sm:text-5xl font-bold'>Redefining Materials</h2>
+                <h2 className='text-white text-2xl sm:text-4xl xl:text-5xl font-bold'>Redefining Materials</h2>
                 <span className='ci-about__title absolute font-bold text-5xl sm:text-[6rem] md:text-[8rem] top-10 sm:top-16 left-0 bg-clip-text pointer-events-none select-none whitespace-nowrap bg-transparent bg-clip-text uppercase opacity-60 animate-bannerTextTransformation duration-300'>Ceratattva</span>
             </div>
         </div>

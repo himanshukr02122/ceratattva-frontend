@@ -118,19 +118,19 @@ const Teams = () => {
                       <div>
                         <div className={`content duration-500 mt-4 ${Object.values(activeTab)[index] ? "animate-fade" : "hidden"}`}>
                           <p className='text-sm xl:text-base'>{item.careerAndExperiences.about}</p>
-                          <ul className='text-sm xl:text-base font-serif mt-4 list-disc pl-4'>
+                          <ul className='text-sm font-semibold mt-4 list-disc pl-4'>
                             {item.careerAndExperiences.experiences.map((item, index)=> {
                               return (
-                                <li key={index}>{item}</li>
+                                <li key={index} className='my-1'>{item}</li>
                               )
                             })}
                           </ul>
                         </div>
                         <div className={ `content duration-500 mt-4 ${Object.values(activeTab)[index] ? "hidden" : "animate-fade"}`}>
-                          <ul className='mt-4 text-sm xl:text-base font-serif list-disc pl-4'>
+                          <ul className='mt-4 text-sm font-semibold list-disc pl-4'>
                             {item.recognitionAndAwards.map((item, index)=> {
                               return (
-                                <li key={index}>{item}</li>
+                                <li key={index} className='my-1'>{item}</li>
                               )
                             })}
                           </ul>

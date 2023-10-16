@@ -34,10 +34,10 @@ const productsDropdownList = [
     subMenuName: "Ceramic Processing Technologies",
     subMenuLink: "/portfolio/ceramic-processing-technologies/",
   },
-  {
-    subMenuName: "Ceraquest",
-    subMenuLink: "/portfolio/ceraquest-bridging-the-gap-between-industry-and-academia/",
-  }
+  // {
+  //   subMenuName: "software consultation and training",
+  //   subMenuLink: "/portfolio/ceraquest-bridging-the-gap-between-industry-and-academia/",
+  // }
 ];
 const variants = {
   open: { opacity: 1, x: 0 },
@@ -269,6 +269,15 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
                 additionalClass="absolute z-10"
                 mobile={props.mobile}
               />
+            </motion.li>
+            <motion.li
+              variants={navItem}
+              className="cursor-pointer border-b-2 leading-10 hover:text-logo-color"
+              whileTap={{ color: "#fff" }}
+            >
+              <Link href="/service">                    
+                Services
+              </Link>
             </motion.li>
             <motion.li
               variants={navItem}

@@ -23,20 +23,20 @@ const AboutUsDropdownList = [
 const productsDropdownList = [
   {
     subMenuName: "Preceramic Precursors and Polymers",
-    subMenuLink: "/portfolio/preceramic-precursors-and-polymers",
+    subMenuLink: "/product/preceramic-precursors-and-polymers",
   },
   {
     subMenuName: "Advanced Ceramics",
-    subMenuLink: "/portfolio/advanced-ceramics/",
+    subMenuLink: "/product/advanced-ceramics/",
   },
   {
     subMenuName: "Ceramic Processing Technologies",
-    subMenuLink: "/portfolio/ceramic-processing-technologies/",
+    subMenuLink: "/product/ceramic-processing-technologies/",
   },
-  {
-    subMenuName: "Ceraquest",
-    subMenuLink: "/portfolio/ceraquest-bridging-the-gap-between-industry-and-academia/",
-  }
+  // {
+  //   subMenuName: "software consultation and training",
+  //   subMenuLink: "/product/ceraquest-bridging-the-gap-between-industry-and-academia/",
+  // }
 ];
 
 const Header: React.FC = (props) => {
@@ -174,6 +174,11 @@ const Header: React.FC = (props) => {
                     additionalClass="absolute z-10 hover:text-logo-color"
                     mobile={mobile}
                   />
+                </li>
+                <li className={`${navbar ? "hover:text-logo-color" : "hover:text-stone-300"} duration-300`}>
+                  <Link href="/service">
+                    Services
+                  </Link>
                 </li>
                 <li className={`${navbar ? "hover:text-logo-color" : "hover:text-stone-300"} duration-300`}>
                   <Link href="/contact">

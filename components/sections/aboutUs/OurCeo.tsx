@@ -10,7 +10,7 @@ const OurCeo = () => {
                     <h3 className=' mb-2 text-base md:text-xl opacity-60 underline-offset-4 underline'>
                         Founder, CEO
                     </h3>
-                    <h2 className='text-2xl sm:text-5xl font-bold mb-3'>Dr. Ganesh Babu T</h2>
+                    <h2 className='text-2xl sm:text-4xl xl:text-5xl font-bold mb-3'>Dr. Ganesh Babu T</h2>
                     <p className='md:text-lg opacity-60'>Ganesh is a passionate chemist and a persistent technological problem solver. He amalgamates his years of experience and expertise on development of functional and high temperature ceramic & composite materials to Ceratattva’s wide product range.</p>
                     <ul className='font-medium mt-8 xl:my-12'>
                         <li className='relative after:absolute after:w-3 after:h-4 after:bottom-[-16px] after:left-10 after:bg-cyan-700 py-4 px-6 mb-4 bg-cyan-700 text-white rounded-full after:content-[""]'>Bagged 5+ government and industry backed technological projects.</li>
