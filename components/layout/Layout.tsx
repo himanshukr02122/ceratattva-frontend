@@ -2,6 +2,7 @@ import Image from "next/image";
 import Footer from "./Footer";
 import Header from "./Header";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 type DashboardLayoutProps = {
     children: React.ReactNode,
@@ -9,6 +10,7 @@ type DashboardLayoutProps = {
 
 const Layout = ({children}:DashboardLayoutProps) => {
   const [scrollButton, setScrollButton] = useState(false);
+  const [quoteButton, setQuoteButton] = useState(true);
   
   useEffect(()=> {
     window.addEventListener("scroll", () => {
@@ -17,6 +19,8 @@ const Layout = ({children}:DashboardLayoutProps) => {
       } else {
         setScrollButton(false);
       }
+      if(window.scrollY) setQuoteButton(false);
+      else setQuoteButton(true);
     });
   }, [])
   return (
@@ -35,6 +39,43 @@ const Layout = ({children}:DashboardLayoutProps) => {
           className="object-center object-contain group-hover:animate-bounce"
         />
       </button>}
+      <motion.button 
+        style={{
+          background: "#000",
+          border:"2px solid #e28929"
+          }}
+          whileHover={{
+          background: [
+              "linear-gradient(to right, #e28929 -200%, #3b2122 -100%, #e28929 0%, #3b2122 100%)",
+              "linear-gradient(to right, #e28929 -100%, #3b2122 0%, #e28929 100%, #3b2122 200%)",
+              "linear-gradient(to right, #e28929 0%, #3b2122 100%, #e28929 200%, #3b2122 300%)",
+          ],
+          border:"2px solid #e28929"
+          }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10,  background: {
+          duration: 2,
+          repeat: Infinity,
+          ease: "linear",
+          from: "linear-gradient(to right, #e28929 -200%, #3b2122 -100%, #e28929 0%, #3b2122 100%)",
+          }, }}
+          className="fixed rounded-l-xl flex items-center justify-between h-12 top-40 right-0 border-2  py-2 ps-2 backdrop-blur ci-bg__light text-white overflow-hidden"
+          // onClick={props.onClickHandle}
+          onMouseEnter={()=>setQuoteButton(true)} 
+          onMouseLeave={()=>setQuoteButton(false)}
+        // className="fixed z-50 flex items-center top-40 right-0 bg-orange-700 text-white py-2 font-bold duration-300"
+        >
+        <span className={`inline-block 3xl:text-lg font-semibold ${quoteButton ? "w-full h-full px-5" : "h-0 w-0 opacity-0"}`}>Request a quote</span>
+        <span className="pr-2">
+          <Image 
+            src="/icons/caret-circle-left.svg"
+            alt=""
+            width={32}
+            height={32}
+            className={`object-center object-contain ${quoteButton ? "rotate-180" : "" } duration-300`}
+          />
+        </span>
+      </motion.button>
       <Footer />
     </>
   );
