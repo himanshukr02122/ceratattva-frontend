@@ -42,8 +42,8 @@ const Footer = () => {
       </div>
       <div className='container mx-auto p-5 text-white'>
         <div className='grid grid-cols-1 xl:grid-cols-4 xl:gap-6'>
-          <div className="col-span-3 grid xs:grid-cols-2 md:grid-cols-3 gap-6">
-            <div>
+          <div className="relative col-span-3 grid xs:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className='w-11/12 sm:w-full'>
               <h4 className='font-medium text-xl px-1'>Our Services</h4>
               <ul className='ci-footer__list pt-5'>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
@@ -84,7 +84,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className='w-11/12 sm:w-full'>
               <h4 className='font-medium text-xl px-1'>About</h4>
               <ul className='ci-footer__list pt-5'>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
@@ -125,7 +125,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>            
+            <div className='w-11/12 sm:w-full'>            
               <h4 className='font-medium text-xl px-1'>Contact us</h4>        
               <ul className='ci-footer__list pt-5'>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
@@ -187,7 +187,7 @@ const Footer = () => {
           <div className='group mt-8 xl:mt-0 px-8 pb-8 pt-5 bg-[rgba(0,0,0,0.2)] hover:bg-white hover:text-black duration-300'>
             <p className='mb-8'>CeraTattva InnoTech (CTIT) Pvt. Ltd., provides specialized and proprietary preceramic precursors, polymers, ceramic products and solutions for diverse array of applications covering key strategic sector of energy, automobile, aerospace and defence.</p>
             <Link href="" target='_blank'
-              className='border py-2 px-5 group-hover:border-black group-hover:bg-black group-hover:text-white font-medium'
+              className='border py-2 px-3 xs:px-5 group-hover:border-black group-hover:bg-black group-hover:text-white font-medium'
             >
               Need more information ?
             </Link>

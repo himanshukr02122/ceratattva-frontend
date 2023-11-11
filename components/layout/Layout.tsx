@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/router';
 
 type DashboardLayoutProps = {
     children: React.ReactNode,
@@ -11,7 +12,7 @@ type DashboardLayoutProps = {
 const Layout = ({children}:DashboardLayoutProps) => {
   const [scrollButton, setScrollButton] = useState(false);
   const [quoteButton, setQuoteButton] = useState(true);
-  
+  const router = useRouter();
   useEffect(()=> {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 100) {
@@ -59,13 +60,13 @@ const Layout = ({children}:DashboardLayoutProps) => {
           ease: "linear",
           from: "linear-gradient(to right, #e28929 -200%, #3b2122 -100%, #e28929 0%, #3b2122 100%)",
           }, }}
-          className="fixed rounded-l-xl flex items-center justify-between h-12 top-40 right-0 border-2  py-2 ps-2 backdrop-blur ci-bg__light text-white overflow-hidden"
-          // onClick={props.onClickHandle}
+          className="fixed rounded-l-xl z-10 flex items-center justify-between h-12 top-40 right-0 border-2 py-2 ps-2 backdrop-blur ci-bg__light text-white overflow-hidden"
+          onClick={()=>router.push("/request-a-quote")}
           onMouseEnter={()=>setQuoteButton(true)} 
           onMouseLeave={()=>setQuoteButton(false)}
         // className="fixed z-50 flex items-center top-40 right-0 bg-orange-700 text-white py-2 font-bold duration-300"
         >
-        <span className={`inline-block 3xl:text-lg font-semibold ${quoteButton ? "w-full h-full px-5" : "h-0 w-0 opacity-0"}`}>Request a quote</span>
+        <span className={`inline-block 3xl:text-lg font-semibold ${quoteButton ? "w-full h-full px-2 xs:px-5" : "h-0 w-0 opacity-0"}`}>Request a quote</span>
         <span className="pr-2">
           <Image 
             src="/icons/caret-circle-left.svg"
