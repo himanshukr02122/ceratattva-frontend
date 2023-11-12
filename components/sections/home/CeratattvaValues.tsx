@@ -13,7 +13,7 @@ const valuesSlides = [
     {src:'/home/pdc-diagram-1.jpg',
       title: "pdc diagram"
     },
-    {src:'/home/Ultraspinner-1-1.jpg',
+    {src:'/home/ultraspinner-1-1.jpg',
       title: "Ultraspinner-1"
     },
     {src:'/home/home-header-banner.jpg',
