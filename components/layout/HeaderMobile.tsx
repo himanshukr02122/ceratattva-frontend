@@ -84,7 +84,7 @@ const navItem = {
     },
   },
 };
-const HeaderMobile: React.FC<{mobile:boolean}> = props => {
+const HeaderMobile: React.FC<{mobile:boolean; mobileNavExpanded:any}> = props => {
 
   const [url, setUrl] = useState("");
   const router = useRouter()
@@ -113,6 +113,7 @@ const HeaderMobile: React.FC<{mobile:boolean}> = props => {
   const onClick = () => {
     setAnimation("moving");
     setShow(show => !show);
+    props.mobileNavExpanded(!show);
     setTimeout(() => {
       setAnimation(animation === "closed" ? "open" : "closed");
     }, 200);

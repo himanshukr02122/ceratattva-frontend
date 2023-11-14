@@ -12,7 +12,11 @@ type DashboardLayoutProps = {
 const Layout = ({children}:DashboardLayoutProps) => {
   const [scrollButton, setScrollButton] = useState(false);
   const [quoteButton, setQuoteButton] = useState(true);
+  const [expanded, setExpanded] = useState(false);
   const router = useRouter();
+  const mobileNavExpanded = (expanded:boolean) => {
+    setExpanded(expanded);
+  }
   useEffect(()=> {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 100) {
@@ -26,7 +30,7 @@ const Layout = ({children}:DashboardLayoutProps) => {
   }, [])
   return (
     <>
-      <Header />
+      <Header mobileNavExpanded={mobileNavExpanded} />
       <main>{children}</main>
       {scrollButton && <button
         onClick={()=>window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}
@@ -40,7 +44,7 @@ const Layout = ({children}:DashboardLayoutProps) => {
           className="object-center object-contain group-hover:animate-bounce"
         />
       </button>}
-      <motion.button 
+      {!expanded && <motion.button 
         style={{
           background: "#000",
           border:"2px solid #e28929"
@@ -64,7 +68,6 @@ const Layout = ({children}:DashboardLayoutProps) => {
           onClick={()=>router.push("/request-a-quote")}
           onMouseEnter={()=>setQuoteButton(true)} 
           onMouseLeave={()=>setQuoteButton(false)}
-        // className="fixed z-50 flex items-center top-40 right-0 bg-orange-700 text-white py-2 font-bold duration-300"
         >
         <span className={`inline-block 3xl:text-lg font-semibold ${quoteButton ? "w-full h-full px-2 xs:px-5" : "h-0 w-0 opacity-0"}`}>Request a quote</span>
         <span className="pr-2">
@@ -76,7 +79,7 @@ const Layout = ({children}:DashboardLayoutProps) => {
             className={`object-center object-contain ${quoteButton ? "rotate-180" : "" } duration-300`}
           />
         </span>
-      </motion.button>
+      </motion.button>}
       <Footer />
     </>
   );
