@@ -39,7 +39,7 @@ const productsDropdownList = [
   // }
 ];
 
-const Header: React.FC = (props) => {
+const Header: React.FC<{mobileNavExpanded:any}> = (props) => {
   const { scrollYProgress } = useScroll();
   const [mobile, setMobile] = useState<boolean>(false)
   const scaleX = useSpring(scrollYProgress, {
@@ -50,7 +50,8 @@ const Header: React.FC = (props) => {
   const [url, setUrl] = useState("");
   const [navbar, setNavbar] = useState(false);
   const [hidden, setHidden] = useState<boolean>(false);
-
+  
+   
   
   useEffect(() => {
     const updateMobile = () => {
@@ -104,7 +105,7 @@ const Header: React.FC = (props) => {
             <div className="flex flex-col justify-between">
               
               <Link
-                href="/"
+                href="https://www.google.com/maps/place/Northern+Arc+Capital+Limited/@12.990903,80.242719,17z/data=!4m6!3m5!1s0x3a526785e2095743:0x998fa8671584eaf6!8m2!3d12.9908578!4d80.2423382!16s%2Fg%2F11fnw11r8c?hl=en&entry=ttu"
                 className="color-primary flex items-center justify-end me-2 mb-2"
                 target="_blank"
               >
@@ -118,9 +119,6 @@ const Header: React.FC = (props) => {
               </Link>
               <div className="flex justify-end">
                 <ul className={`flex gap-x-4 me-2 mb-2 ${navbar ? "":"text-white"}`}>
-                  {/* <li>
-                  
-                  </li> */}
                   <li>
                     <a
                       href={`mailto:info@ceratattva.com`}
@@ -189,7 +187,7 @@ const Header: React.FC = (props) => {
             </div>
           </div>
         </div>
-      </motion.nav> : <HeaderMobile mobile={mobile} />}
+      </motion.nav> : <HeaderMobile mobile={mobile} mobileNavExpanded={props.mobileNavExpanded} />}
       {navbar && <motion.div className={`fixed left-0 origin-left border-b-4 shadow-lg border-black w-full ${mobile ? "top-24": ""}`} style={{ scaleX }}></motion.div>}
     </header>
   );

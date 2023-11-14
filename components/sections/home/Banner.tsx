@@ -16,7 +16,9 @@ const Banner: React.FC = (props) => {
             <div className='md:w-2/4 lg:w-2/4'>
               <h2 className='font-light text-xl md:text-2xl xl:text-3xl mb-5'>CeraTattva InnoTech</h2>
               <h3 className='font-bold text-2xl md:text-3xl xl:text-4xl mb-3'>Redefining Materials</h3>
-              <p className='font-light text-sm md:text-base xl:text-lg'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, numquam? Doloribus, ex. A, delectus atque. Aliquid omnis similique id dolore consequuntur dolorum, nostrum qui minima sed excepturi minus blanditiis at reiciendis labore veniam? Suscipit magnam ipsa eveniet voluptatibus non cum dolore maiores dolorum ab magni ducimus reiciendis, dicta, voluptas omnis.</p>  
+              <p className='font-light text-sm md:text-base xl:text-lg'>
+                CeraTattva InnoTech (CTIT) Pvt. Ltd., provides specialized and proprietary preceramic precursors/polymers, ceramic products and solutions for diverse array of applications covering key strategic sector of energy, automobile, aerospace and defence.  
+              </p>  
             </div>
             <div className=''>
               <PrimaryButton buttonName="Video on Company" onClickHandle={handleClick} />
@@ -31,8 +33,8 @@ const Banner: React.FC = (props) => {
       >
           <iframe 
             className="h-full w-full rounded-3xl"
-            src="https://www.youtube.com/embed/ds_EqfyLbUs?si=7OIduHBQZr9b8leD&autohide=1&autoplay=1&enablejsapi=1&amp;start=8" 
-            title="Rocket Lounch" 
+            src="https://www.youtube.com/embed/EkE56hsjO-M?si=DROclQHW__OTtmKg&autohide=1&autoplay=1&enablejsapi=1&amp;start=8" 
+            title="CeraTattva InnoTech-First Glimpse| IITM Incubation| IITM Research Park| Startup| Ceramics" 
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowFullScreen></iframe>

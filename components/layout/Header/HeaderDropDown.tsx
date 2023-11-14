@@ -1,7 +1,6 @@
 import { useState,useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import Router from "next/router";
 const Dop: React.FC<{menuName: String, dropDownMenuData: any [], mainLink: string, additionalClass: String, mobile: boolean }> = (props) => {
   const [navbar, setNavbar] = useState(false);
   const [isMenuVisible, setMenuVisible] = useState(false);
@@ -23,19 +22,29 @@ const Dop: React.FC<{menuName: String, dropDownMenuData: any [], mainLink: strin
         onMouseEnter={() => setMenuVisible(true)}
         onMouseLeave={() => setMenuVisible(false)}
       >
-        <Link href={props.mainLink} className={`flex items-center ${isMenuVisible ? !props.mobile ? navbar ? "text-logo-color" : "text-stone-300" : "text-logo-color" : ""} duration-300`}><span className="me-1">{props.menuName}</span>
+        {!props.mobile ? <Link href={props.mainLink} className={`flex items-center ${isMenuVisible ? navbar ? "text-logo-color" : "text-stone-300" : ""} duration-300`}><span className="me-1">{props.menuName}</span>
           <AnimatePresence>
             <motion.div animate={{ rotate: isMenuVisible ? 180 : 0 }}
              transition={{ duration: 0.8 }}
              >
-              {!props.mobile ? <svg xmlns="http://www.w3.org/2000/svg"  width="12" height="12" fill={navbar ? isMenuVisible ? '#db4328' : "#000" : "#fff" } className="bi bi-chevron-down" viewBox="0 0 16 16">
+               <svg xmlns="http://www.w3.org/2000/svg"  width="12" height="12" fill={navbar ? isMenuVisible ? '#db4328' : "#000" : "#fff" } className="bi bi-chevron-down" viewBox="0 0 16 16">
                  <path fillRule="evenodd"  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-              </svg>:<svg xmlns="http://www.w3.org/2000/svg"  width="12" height="12" fill={isMenuVisible ? '#db4328' : "#fff" } className="bi bi-chevron-down" viewBox="0 0 16 16">
-                 <path fillRule="evenodd"  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-              </svg>}
+              </svg>
             </motion.div>
           </AnimatePresence>
-          </Link>
+          </Link> : 
+            <div className={`flex items-center ${isMenuVisible ? "text-logo-color" : ""} duration-300`}><span className="me-1">{props.menuName}</span>
+            <AnimatePresence>
+              <motion.div animate={{ rotate: isMenuVisible ? 180 : 0 }}
+               transition={{ duration: 0.8 }}
+               >
+                <svg xmlns="http://www.w3.org/2000/svg"  width="12" height="12" fill={isMenuVisible ? '#db4328' : "#fff" } className="bi bi-chevron-down" viewBox="0 0 16 16">
+                   <path fillRule="evenodd"  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </motion.div>
+            </AnimatePresence>
+            </div>
+          }
           {isMenuVisible && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -44,6 +53,16 @@ const Dop: React.FC<{menuName: String, dropDownMenuData: any [], mainLink: strin
             className={`  ${props.additionalClass}`}
           >
             <ul className="mt-5 bg-white text-black font-medium relative z-10" >
+              {props.mobile && 
+                <li
+                className="text-nowrap px-6 text-sm border-b border-slate-500 py-3 hover:text-logo-color"
+                key={props.mainLink}
+              >
+                <Link href={props.mainLink} >
+                    {props.menuName}
+                </Link>
+                </li>
+              }
               {props.dropDownMenuData.map((subMenuItem, index) => {
                 return (
                   <li

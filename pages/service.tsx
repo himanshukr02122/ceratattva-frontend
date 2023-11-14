@@ -15,7 +15,7 @@ const Services = () => {
   return (
     <>
       <ServiceBanner />
-      <section className='py-10 xl:py-16'>
+      <section className='py-5 md:py-8 xl:py-12'>
         <div className="container mx-auto p-5">
           <h2 className='relative text-2xl md:text-3xl xl:text-4xl font-bold pb-3 mb-6 ci-title--ceratattva inline-block'>
             Consultation & Training services
