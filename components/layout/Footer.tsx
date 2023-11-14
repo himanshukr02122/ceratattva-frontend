@@ -129,7 +129,7 @@ const Footer = () => {
               <h4 className='font-medium text-xl px-1'>Contact us</h4>        
               <ul className='ci-footer__list pt-5'>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-1 items-center px-1'>
+                  <Link href="https://www.google.com/maps/place/Northern+Arc+Capital+Limited/@12.990903,80.242719,17z/data=!4m6!3m5!1s0x3a526785e2095743:0x998fa8671584eaf6!8m2!3d12.9908578!4d80.2423382!16s%2Fg%2F11fnw11r8c?hl=en&entry=ttu" className='flex gap-1 items-center px-1'>
                     <div className='relative w-5 h-5 shrink-0'>
                       <Image 
                         src="/icons/location-svg.svg"
@@ -205,11 +205,17 @@ const Footer = () => {
               <li className="ci-footer__list border-r border-stone-400 flex items-center px-3 text-sm xl:text-base font-light">
                 <a
                   className="ci-footer__link hover:opacity-80"
-                  href="./web-policy.html#ci-privacy-policy"
+                  href="/pdf/privacy-policy.pdf"
+                  target='_blank'
                   >Privacy Policy</a>
               </li>
               <li className="ci-footer__list flex items-center px-3 text-sm xl:text-base font-light">
-                <a className="ci-footer__link hover:opacity-80" href="#">Terms &amp; Conditions</a>
+                <a 
+                  className="ci-footer__link hover:opacity-80" 
+                  href="/pdf/terms-of-service.pdf"
+                  target='_blank' 
+                >
+                  Terms &amp; Conditions</a>
               </li>
             </ul>
           </div>
