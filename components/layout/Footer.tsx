@@ -47,7 +47,7 @@ const Footer = () => {
               <h4 className='font-medium text-xl px-1'>Our Services</h4>
               <ul className='ci-footer__list pt-5'>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-2 items-center px-1'>
+                  <Link href="/product/preceramic-precursors-and-polymers" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
@@ -56,7 +56,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-2 items-center px-1'>
+                  <Link href="/product/advanced-ceramics" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
@@ -65,7 +65,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-2 items-center px-1'>
+                  <Link href="/product/ceramic-processing-technologies" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
@@ -73,7 +73,7 @@ const Footer = () => {
                     <span className='truncate hover:overflow-visible hover:whitespace-normal'>Ceramic Processing Technologies</span>
                   </Link>
                 </li>
-                <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
+                {/* <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
                   <Link href="" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
@@ -81,14 +81,14 @@ const Footer = () => {
                     </span>
                     <span className='truncate hover:overflow-visible hover:whitespace-normal'>Ceraquest</span>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className='w-11/12 sm:w-full'>
               <h4 className='font-medium text-xl px-1'>About</h4>
               <ul className='ci-footer__list pt-5'>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-2 items-center px-1'>
+                  <Link href="/" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
@@ -97,7 +97,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-2 items-center px-1'>
+                  <Link href="/about-us/teams" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
@@ -105,17 +105,17 @@ const Footer = () => {
                     <span className='truncate hover:overflow-visible hover:whitespace-normal'>The Team</span>
                   </Link>
                 </li>
-                <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-2 items-center px-1'>
+                {/* <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
+                  <Link href="#" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
                     </span>
                     <span className='truncate hover:overflow-visible hover:whitespace-normal'>Client testimonials</span>
                   </Link>
-                </li>
+                </li> */}
                 <li className='ci-footer__list-item pb-3 text-sm lg:text-base font-light hover:opacity-80'>
-                  <Link href="" className='flex gap-2 items-center px-1'>
+                  <Link href="/contact" className='flex gap-2 items-center px-1'>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
@@ -198,10 +198,10 @@ const Footer = () => {
             className="py-3 flex justify-between gap-3 xl:gap-5 px-0 align-items-baseline flex-wrap md:flex-nowrap"
           >
             <ul className="ci-footer__lists flex flex-wrap gap-1 mx-[-12px]">
-              <li className="ci-footer__list border-r border-stone-400 flex items-center px-3 text-sm xl:text-base font-light">
+              {/* <li className="ci-footer__list border-r border-stone-400 flex items-center px-3 text-sm xl:text-base font-light">
                 <a className="ci-footer__link hover:opacity-80" href="./web-policy.html"
                   >Website Usage Policy</a>
-              </li>
+              </li> */}
               <li className="ci-footer__list border-r border-stone-400 flex items-center px-3 text-sm xl:text-base font-light">
                 <a
                   className="ci-footer__link hover:opacity-80"

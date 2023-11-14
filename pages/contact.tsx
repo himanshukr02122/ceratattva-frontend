@@ -14,7 +14,6 @@ const ContactUs = () => {
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d971.9213913486041!2d80.241444!3d12.991952000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526787e5aeb737%3A0xdcee4dd1a4f89532!2sIITM%20RESEARCH%20PARK%2C%20Kanagam%2C%20Tharamani%2C%20Chennai%2C%20Tamil%20Nadu%20600113!5e0!3m2!1sen!2sin!4v1697560011256!5m2!1sen!2sin" 
               className=' h-64 sm:h-96 lg:h-full w-full'
-              // style="border:0;" 
               allowFullScreen
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade">
