@@ -41,7 +41,7 @@ const CoreValues = () => {
         className='px-5 py-8 sm:py-14 container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto'>
           <h2 className='relative hidden md:inline-block text-4xl text-white font-bold pb-3 mb-10 ci-title--ceratattva'>Our Core Values</h2>
           <h2 className='relative md:hidden text-4xl text-white font-bold pb-3 mb-10 text-center'>
-            <span className='border-b-2 pb-2 border-white'>Achievements</span>
+            <span className='border-b-2 pb-2 border-white'>Our Core Values</span>
           </h2>
           <div className='grid gap-3 lg:gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 '>
             {features && features.length && features.map((item, index)=> {
