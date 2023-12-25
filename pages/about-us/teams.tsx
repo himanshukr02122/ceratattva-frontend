@@ -82,7 +82,7 @@ const Teams = () => {
     <>
         <TeamsBanner />
         <section>
-          <div className="container mx-auto p-2 2xl:max-w-screen-2xl">
+          <div className="container mx-auto p-5 2xl:max-w-screen-xl 4xl:max-w-screen-2xl">
             {teams.map((item:{id:string,snap:string,name:string,designation:string,careerAndExperiences:{about:string,experiences:string[]},recognitionAndAwards:string[]},index:number)=> {
               return(
                 <div className='team grid md:grid-cols-2 gap-5 lg:gap-10 pt-10 md:pt-20 xl:pt-32 last:pb-20' key={item.id} id={item.id}>

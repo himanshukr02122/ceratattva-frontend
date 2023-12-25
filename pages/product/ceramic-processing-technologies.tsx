@@ -41,7 +41,7 @@ const CeramicProcessingTechnologies = () => {
         />
 
         <section className='py-10 md:py-16 2xl:py-20'>
-            <div className='container mx-auto px-2'>
+            <div className='container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto px-5'>
                 <h3 className='text-center relative text-xl md:text-2xl xl:text-4xl font-bold'>
                     Polymer & Ceramic fiber processing
                 </h3>

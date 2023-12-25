@@ -22,25 +22,12 @@ const socialMediaHandlers = [
     link: "https://www.linkedin.com",
     altText: "Social Media handle-linkedin"
   },
-  // {
-  //   icon: "/icons/behance-icon.svg",
-  //   link: "https://www.behance.com",
-  //   altText: "Social Media handle-behance"
-  // },
 ]
 
 const Footer = () => {
   return (
     <footer className='py-10' style={{background:"linear-gradient(45deg, rgba(0,39,94,1) 0%, rgba(6,112,169,1) 100%)"}}>
-      <div className='relative w-full'>
-        {/* <Image 
-          src="/footer-wave.svg"
-          alt='footer wave'
-          fill
-          className='object-cover object-center'
-        /> */}
-      </div>
-      <div className='container mx-auto p-5 text-white'>
+      <div className='container mx-auto 2xl:max-w-screen-xl 4xl:max-w-screen-2xl p-5 text-white'>
         <div className='grid grid-cols-1 xl:grid-cols-4 xl:gap-6'>
           <div className="relative col-span-3 grid xs:grid-cols-2 md:grid-cols-3 gap-6">
             <div className='w-11/12 sm:w-full'>

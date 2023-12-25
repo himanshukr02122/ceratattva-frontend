@@ -58,8 +58,8 @@ const AllProducts = () => {
         }
     }
   return (
-    <section className='py-10'>
-      <div className="container mx-auto px-2">
+    <section className='py-10 lg:py-16'>
+      <div className="container mx-auto 2xl:max-w-screen-xl 4xl:max-w-screen-2xl px-5">
         <div className='titles text-sm sm:text-base xl:text-lg flex gap-6 sm:gap-10 xl:gap-14 text-gray-500 pb-5 xl:pb-10 overflow-x-auto'>
             <button 
                 className={`hover:text-black hover:border-b-2 hover:border-black whitespace-nowrap ${key===1 ? "text-black font-bold border-b-2 border-black" : "border-b-2 border-transparent"}`}
@@ -87,7 +87,7 @@ const AllProducts = () => {
                 onClick={()=> {setKey(5); filterHandler("Services");}}
             >Services</button>
         </div>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 justify-center gap-y-16 pt-10'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center gap-y-16 pt-10'>
             {
                 !loader ? tabData.map((item, index)=> {
                     return(
@@ -116,7 +116,7 @@ const AllProducts = () => {
                             <div className='py-2 top-64 bottom-0 left-0 px-4'>
                                 <div>
                                     <h3 className='text-2xl font-semibold line-clamp-2'>{item.title}</h3>
-                                    <p className='text-sm xl:text-lg text-justify line-clamp-3 my-2 duration-300'>{item.description}</p>
+                                    <p className='text-sm xl:text-lg line-clamp-3 my-2 duration-300'>{item.description}</p>
                                 </div>
                             </div>
                             <Link href="" target='_blank'

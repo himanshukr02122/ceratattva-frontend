@@ -6,7 +6,7 @@ const ContactUs = () => {
     <>
       <ContactUsBanner/>
       <section className='py-10 lg:py-20'>
-        <div className="container mx-auto p-5">
+        <div className="container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto p-5">
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16'>
             <div className='border-2 flex justify-center items-center h-full border-black'>
               <span className='text-4xl font-bold'>Area For Form</span>

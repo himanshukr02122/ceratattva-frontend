@@ -38,19 +38,19 @@ const CoreValues = () => {
   return (
     <section style={{background:"linear-gradient(45deg, rgba(0,39,94,1) 0%, rgba(6,112,169,1) 100%)"}} id='coreValues'>
       <div 
-        className='py-8 sm:py-14 container mx-auto'>
-          <h2 className='relative hidden md:inline-block text-4xl text-white font-bold pb-3 mb-10 ci-title--ceratattva mx-2'>Our Core Values</h2>
+        className='px-5 py-8 sm:py-14 container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto'>
+          <h2 className='relative hidden md:inline-block text-4xl text-white font-bold pb-3 mb-10 ci-title--ceratattva'>Our Core Values</h2>
           <h2 className='relative md:hidden text-4xl text-white font-bold pb-3 mb-10 text-center'>
             <span className='border-b-2 pb-2 border-white'>Achievements</span>
           </h2>
-          <div className=' grid gap-3 lg:gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 '>
+          <div className='grid gap-3 lg:gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 '>
             {features && features.length && features.map((item, index)=> {
               return(
-                <div key={index} className='group h-100 text-white rounded-bl-3xl rounded px-8 sm:px-5 py-4 xl:p-5 border hover:bg-white hover:text-black mx-auto sm:mx-2 hover:scale-105 duration-300 w-10/12 sm:w-auto'>
+                <div key={index} className='group h-100 text-white rounded-bl-3xl rounded px-8 sm:px-5 py-4 xl:p-5 border hover:bg-white hover:text-black mx-auto hover:scale-105 duration-300 w-10/12 sm:w-auto'>
                   <div className='mb-6'>
-                    <h5 className='text-base mb-2'>{String(item.id).padStart(2, '0')}</h5>
-                    <h3 className='font-semibold text-xl mb-2'>{item.title}</h3>
-                    <p className='text-sm text-gray-200 font-light line-clamp-3 group-hover:text-black group-hover:font-normal'>{item.description}</p>
+                    <h5 className='text-base md:text-lg mb-2'>{String(item.id).padStart(2, '0')}</h5>
+                    <h3 className='font-semibold text-xl md:text-2xl mb-2'>{item.title}</h3>
+                    <p className='text-sm md:text-base text-gray-200 line-clamp-3 group-hover:text-black group-hover:font-normal'>{item.description}</p>
                   </div>
                 </div>
               )

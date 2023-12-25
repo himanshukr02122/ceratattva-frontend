@@ -4,7 +4,7 @@ import React from 'react'
 const OurCeo = () => {
   return (
     <section className='py-20'>
-        <div className='container mx-auto px-2 bg-[#f2fcfe] rounded-[30px]'>
+        <div className='container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto px-5 bg-[#f2fcfe] rounded-[30px]'>
             <div className='grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6 xl:gap-10 items-end overflow-hidden'>
                 <div className=' pl-5 mt-4 sm:mt-8'>
                     <h3 className=' mb-2 text-base md:text-xl opacity-60 underline-offset-4 underline'>

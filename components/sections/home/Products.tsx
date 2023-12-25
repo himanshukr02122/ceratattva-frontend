@@ -129,7 +129,7 @@ const Items:React.FC<{currentItems:{}[]}> = ({ currentItems }) => {
 const Products = () => {
   return (
     <section className='py-5 sm:py-10'>
-      <div className='container mx-auto px-5'>      
+      <div className='container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto px-5'>      
           <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva inline-block'>Products</h2>
           <PaginatedItems itemsPerPage={4} />
       </div>
