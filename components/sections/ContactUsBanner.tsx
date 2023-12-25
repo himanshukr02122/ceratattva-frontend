@@ -16,7 +16,7 @@ const ContactUsBanner = () => {
             </div>
             <div className='mt-20 sm:mt-40 bg-[rgba(0,0,0,0.8)] grid sm:grid-cols-2 md:grid-cols-3 gap-5 px-6 py-10'>
                 <div className='flex items-center gap-2 shrink-0'>
-                    <div className='relative w-16 h-16 bg-white m-2 shrink-0'>
+                    <div className='relative w-16 h-16 m-2 shrink-0'>
                         <Image 
                             src="/icons/phone-svg2.svg"
                             alt='phone icon' 
@@ -33,7 +33,7 @@ const ContactUsBanner = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-2 shrink-0'>
-                    <div className='relative w-16 h-16 bg-white m-2 shrink-0'>
+                    <div className='relative w-16 h-16 m-2 shrink-0'>
                         <Image 
                         src="/icons/contact-svg.svg"
                         alt='contact 2'
@@ -47,7 +47,7 @@ const ContactUsBanner = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-2 shrink-0'>
-                    <div className='relative w-16 h-16 bg-white m-2 shrink-0'>
+                    <div className='relative w-16 h-16 m-2 shrink-0'>
                         <Image 
                             src="/icons/location-svg.svg"
                             alt='location icon' 
