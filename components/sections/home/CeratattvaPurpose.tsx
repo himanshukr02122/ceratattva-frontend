@@ -6,7 +6,7 @@ const CeratattvaPurpose: React.FC = (props) => {
     const [showModal, setShowModal] = useState(false);
   return (
     <section className='bg-white py-5 sm:py-10'>
-      <div className='container mx-auto p-5'>
+      <div className='container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto p-5'>
         <h2 className='relative text-4xl font-bold pb-3 mb-10 ci-title--ceratattva inline-block'>Ceratattva</h2>
         <div className="lg:grid lg:grid-cols-5 gap-10">
             <div className='lg:col-span-2 overflow-hidden rounded-3xl'>

@@ -5,10 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 
 const imageDate=[{src:"/about-us/roadmap-2.jpg", altText: "Roadmap"}, {src:"/about-us/pdc-product-1.jpg", altText: "PDC Product"}, {src:"/about-us/pdc-diagram-3.jpg", altText: "PDC Diagram"}, {src:"/about-us/applications-2.jpg", altText: "Application"}]
@@ -20,6 +21,7 @@ export default function SwiperCoverflow() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
+        navigation={true}
         slidesPerView={2}
         coverflowEffect={{
           rotate: 50,
@@ -29,8 +31,8 @@ export default function SwiperCoverflow() {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        modules={[EffectCoverflow, Pagination]}
-        className=" pt-0 relative w-full"
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="mySwiperCoverFlow pt-0 relative w-full"
       >
         {
           imageDate.map((item, index)=> {

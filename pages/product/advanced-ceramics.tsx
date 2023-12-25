@@ -29,7 +29,7 @@ const AdvancedCeramics = () => {
         />
 
         <section className='py-10 md:py-16 2xl:py-20'>
-            <div className='container mx-auto px-2'>
+            <div className='container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto px-5'>
                 <p 
                     className='text-base sm:text-xl text-gray-800 first-letter:uppercase
                     first-letter:text-5xl sm:first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900'>

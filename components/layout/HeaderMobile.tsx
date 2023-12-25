@@ -149,9 +149,9 @@ const HeaderMobile: React.FC<{mobile:boolean; mobileNavExpanded:any}> = props =>
               transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
               className={`z-50 ${navbar? "bg-white shadow-lg h-24" : "flex items-center"} duration-300`}
         >
-          <div className="container mx-auto">
+          <div className="container mx-auto px-5">
             <div className="pt-3 pb-2 flex justify-end">
-                <ul className={`flex gap-4 mx-2 ${navbar ? "":"text-white"}`}>
+                <ul className={`flex gap-4 ${navbar ? "":"text-white"}`}>
                   <li>
                     <a
                       href={`mailto:info@ceratattva.com`}
@@ -182,9 +182,9 @@ const HeaderMobile: React.FC<{mobile:boolean; mobileNavExpanded:any}> = props =>
                   </li>
                 </ul>
               </div>
-              <div className="flex justify-between items-center mx-2">
+              <div className="flex justify-between items-center">
                 <Link href="/">
-                  <div className={`relative ${navbar ? "w-16" : "w-24"} duration-300`}>
+                  <div className={`relative ${navbar ? "w-16" : "w-20"} duration-300`}>
                     <Image
                       src={LogoLight}
                       alt="Maven Silicon - The Best VLSI Training Institute in Bangalore"

@@ -6,7 +6,7 @@ const ContactUsBanner = () => {
     <section 
         className='h-[800px] sm:h-[720px] md:h-[700px] 3xl:h-[1000px] bg-fixed flex items-start pt-20 pb-12 lg:pb-16 3xl:pt-52 3xl:pb-32 bg-no-repeat shadow-lg bg-cover bg-white relative bg-[url("/contact-us.jpg")] bg-center bg-no-repeat after:content-[""] after:absolute after:w-full after:h-full after:bg-[rgba(0,0,0,0.6)] after:top-0 after:left-0'
     >
-        <div className='container mx-auto px-2 z-[9]'>
+        <div className='container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto px-5 z-[9]'>
             <h3 className='mt-24 md:mt-32 text-white mb-2 text-base md:text-xl opacity-60 underline-offset-4 underline'>
                 Have a question?
             </h3>
@@ -16,7 +16,7 @@ const ContactUsBanner = () => {
             </div>
             <div className='mt-20 sm:mt-40 bg-[rgba(0,0,0,0.8)] grid sm:grid-cols-2 md:grid-cols-3 gap-5 px-6 py-10'>
                 <div className='flex items-center gap-2 shrink-0'>
-                    <div className='relative w-16 h-16 bg-white m-2 shrink-0'>
+                    <div className='relative w-16 h-16 m-2 shrink-0'>
                         <Image 
                             src="/icons/phone-svg2.svg"
                             alt='phone icon' 
@@ -33,7 +33,7 @@ const ContactUsBanner = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-2 shrink-0'>
-                    <div className='relative w-16 h-16 bg-white m-2 shrink-0'>
+                    <div className='relative w-16 h-16 m-2 shrink-0'>
                         <Image 
                         src="/icons/contact-svg.svg"
                         alt='contact 2'
@@ -47,7 +47,7 @@ const ContactUsBanner = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-2 shrink-0'>
-                    <div className='relative w-16 h-16 bg-white m-2 shrink-0'>
+                    <div className='relative w-16 h-16 m-2 shrink-0'>
                         <Image 
                             src="/icons/location-svg.svg"
                             alt='location icon' 

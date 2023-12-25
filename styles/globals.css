@@ -92,6 +92,18 @@
   align-items: baseline;
   z-index: 12;
 }
+.mySwiperCoverFlow {
+
+}
+.mySwiperCoverFlow .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  color: var(--color-orange);
+}
+.mySwiperCoverFlow .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  color: var(--color-orange);
+}
+.mySwiperCoverFlow .swiper-pagination-bullet {
+  background: var(--color-orange)
+}
 .mySwiper .swiper-button-prev:after {
   content: "\2039";
   line-height: 38px !important;

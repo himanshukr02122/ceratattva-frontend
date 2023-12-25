@@ -6,7 +6,7 @@ const ProductBanner = () => {
     <section 
         className='relative h-[560px] sm:h-[600px] md:h-[700px] 3xl:h-[1000px] bg-fixed flex items-start pt-20 pb-12 lg:pb-16 3xl:pt-52 3xl:pb-30 bg-no-repeat shadow-lg bg-cover bg-white relative bg-[url("/about-us/pdc-diagram-3.jpg")] bg-center bg-no-repeat after:content-[""] after:absolute after:w-full after:h-full after:bg-[rgba(0,0,0,0.6)] after:top-0 after:left-0'
     >
-        <div className='relative z-[9] container mx-auto mt-6 p-2'>
+        <div className='relative z-[9] container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl mx-auto mt-6 p-5'>
             <h3 className='mt-16 md:mt-24 text-white mb-2 text-base md:text-xl opacity-60 underline-offset-4 underline'>
                 One Stop Solution
             </h3>

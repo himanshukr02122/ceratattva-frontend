@@ -4,7 +4,7 @@ import SwiperCoverflow from '@/components/globals/swiperSlides/SwiperCoverflow';
 const VisionAndMissions = () => {
   return (
     <section className='pb-10' id='visionAndMission'>
-        <div className="container mx-auto">
+        <div className="container 2xl:max-w-screen-xl 4xl:max-w-screen-2xl px-5 mx-auto">
             <div>
                 {/* <h2 className='relative text-4xl font-bold pb-3 mb-5 inline-block border-b-2 border-red-700'>CeraTattva Vision and Mission</h2> */}
                 <h2 className='relative text-4xl font-bold pb-3 mb-6 ci-title--ceratattva inline-block'>CeraTattva Vision and Mission</h2>
